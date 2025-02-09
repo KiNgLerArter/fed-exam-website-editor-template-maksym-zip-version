@@ -96,14 +96,20 @@ h6 {
 }
 
 .text-align-left {
+  display: block;
+  width: 100%;
   text-align: left;
 }
 
 .text-align-center {
+  display: block;
+  width: 100%;
   text-align: center;
 }
 
 .text-align-right {
+  display: block;
+  width: 100%;
   text-align: right;
 }
 

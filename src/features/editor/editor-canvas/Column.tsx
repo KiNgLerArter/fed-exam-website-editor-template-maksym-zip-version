@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { SelectableContainer } from "../../ui-kit/selectable-container";
+import { SelectableContainer } from "../../../ui-kit/selectable-container";
 
 export const Column = ({
   selected,

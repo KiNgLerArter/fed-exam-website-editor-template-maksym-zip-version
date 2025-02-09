@@ -1,13 +1,13 @@
-import { Icons } from "./icons";
-import { ImagePlaceholder } from "./ImagePlaceholder";
+import { ImagePlaceholder } from "./editor-canvas/ImagePlaceholder";
 import Markdown from "markdown-to-jsx";
-import { Column } from "./Column";
-import { Row } from "./Row";
-import { Stage } from "./Stage";
+import { Column } from "./editor-canvas/Column";
+import { Row } from "./editor-canvas/Row";
+import { Page } from "./Page";
+import { EditorForm } from "./editor-form/EditorForm";
 
 export const MockEditor = () => (
   <div className="editor">
-    <Stage onSelect={() => console.log("Stage selected")}>
+    <Page onSelect={() => console.log("Stage selected")}>
       <Row onSelect={() => console.log("Row selected")}>
         <Column onSelect={() => console.log("Column selected")}>
           <Markdown className="text-align-center"># Animals of the World</Markdown>
@@ -72,66 +72,8 @@ export const MockEditor = () => (
           <ImagePlaceholder />
         </Column>
       </Row>
-    </Stage>
+    </Page>
 
-    <div className="properties">
-      <div className="section">
-        <div className="section-header">Page</div>
-        <div className="actions">
-          <button className="action">Add row</button>
-        </div>
-      </div>
-
-      <div className="section">
-        <div className="section-header">Row</div>
-        <div className="actions">
-          <button className="action">Add column</button>
-        </div>
-      </div>
-
-      <div className="section">
-        <div className="section-header">Column</div>
-        <div className="button-group-field">
-          <label>Contents</label>
-          <div className="button-group">
-            <button className="selected">
-              <Icons.Text />
-            </button>
-            <button>
-              <Icons.Image />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="section">
-        <div className="section-header">Text</div>
-        <div className="button-group-field">
-          <label>Alignment</label>
-          <div className="button-group">
-            <button className="selected">
-              <Icons.TextAlignLeft />
-            </button>
-            <button>
-              <Icons.TextAlignCenter />
-            </button>
-            <button>
-              <Icons.TextAlignRight />
-            </button>
-          </div>
-        </div>
-        <div className="textarea-field">
-          <textarea rows={8} placeholder="Enter text"></textarea>
-        </div>
-      </div>
-
-      <div className="section">
-        <div className="section-header">Image</div>
-        <div className="text-field">
-          <label htmlFor="image-url">URL</label>
-          <input id="image-url" type="text" />
-        </div>
-      </div>
-    </div>
+    <EditorForm />
   </div>
 );
