@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
-import { EditorStaticExample } from "./components";
 import "./index.css";
+import { MockEditor } from "./features/editor/MockEditor";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
-root.render(<EditorStaticExample />);
+root.render(<MockEditor />);

@@ -1,6 +1,4 @@
-import { FC } from "react";
-
-export const ImagePlaceholder: FC = () => (
+export const ImagePlaceholder = () => (
   <div className="image-placeholder">
     <svg viewBox="0 0 28 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path

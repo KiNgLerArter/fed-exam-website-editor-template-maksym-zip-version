@@ -1,12 +1,11 @@
-import { FC } from "react";
-import { Column } from "../column";
-import { Icons } from "../icons";
-import { ImagePlaceholder } from "../image-placeholder";
-import { Markdown } from "../markdown";
-import { Row } from "../row";
-import { Stage } from "../stage";
+import { Icons } from "./icons";
+import { ImagePlaceholder } from "./ImagePlaceholder";
+import Markdown from "markdown-to-jsx";
+import { Column } from "./Column";
+import { Row } from "./Row";
+import { Stage } from "./Stage";
 
-export const EditorStaticExample: FC = () => (
+export const MockEditor = () => (
   <div className="editor">
     <Stage onSelect={() => console.log("Stage selected")}>
       <Row onSelect={() => console.log("Row selected")}>
