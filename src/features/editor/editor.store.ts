@@ -1,6 +1,6 @@
 import { atomWithStorage } from "jotai/utils";
-import { EditorColumnItem, EditorRowItem } from "./Editor";
 import { atom, useAtomValue, useSetAtom } from "jotai";
+import { EditorRowItem, EditorColumnItem } from "./editor.model";
 
 export const useEditorContentValue = () => ({
   editorContent: useAtomValue(editorContentAtom),
